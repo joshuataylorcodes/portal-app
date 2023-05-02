@@ -1,10 +1,18 @@
+import { Link } from "react-router-dom";
 import { LogoutLink } from "./LogoutLink";
 
 export function Header() {
   return (
     <header>
       <nav>
-        <a href="#">Home</a> | <a href="#">Link</a> | <a href="#">Logout</a>
+        <Link to="/resume/:id">My Resume</Link> |
+        {localStorage.jwt === undefined ? (
+          <>
+            <a href="/login"> Login </a>
+          </>
+        ) : (
+          <a href="/logout"> Logout </a>
+        )}
       </nav>
     </header>
   );
