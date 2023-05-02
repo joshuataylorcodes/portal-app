@@ -8,10 +8,10 @@ export function ResumeShow(props) {
         <div key={resume.id}>
           <form>
             <h2>
-              Name <input defaultValue={props.resume.name} type="text" />{" "}
+              Name <input defaultValue={resume.name} type="text" />{" "}
             </h2>
             <h2>
-              Email <input defaultValue={props.resume.email} type="text" />{" "}
+              Email <input defaultValue={resume.email} type="text" />{" "}
             </h2>
           </form>
         </div>
