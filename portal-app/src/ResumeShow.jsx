@@ -6,8 +6,14 @@ export function ResumeShow(props) {
       <h1>Update Resume</h1>
       {props.resumes.map((resume) => (
         <div key={resume.id}>
-          <h2>{resume.name}</h2>
-          <p>{resume.email}</p>
+          <form>
+            <h2>
+              Name <input defaultValue={props.resume.name} type="text" />{" "}
+            </h2>
+            <h2>
+              Email <input defaultValue={props.resume.email} type="text" />{" "}
+            </h2>
+          </form>
         </div>
       ))}
     </div>

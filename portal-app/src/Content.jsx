@@ -1,4 +1,5 @@
-import { ResumeShow } from "./ResumeShow";
+import { LogoutLink } from "./LogoutLink";
+import { Axios } from "axios";
 
 export function Content() {
   const resumes = [
