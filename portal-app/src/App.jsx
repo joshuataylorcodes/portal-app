@@ -27,7 +27,7 @@ function App() {
           Edit <code>src/App.jsx</code> and Luci is just waaaaaaay cooler than Josh
         </p>
       </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+      <p className="read-the-docs">Bush did 9/11</p>
     </>
   );
 }
