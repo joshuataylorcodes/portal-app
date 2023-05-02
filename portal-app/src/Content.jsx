@@ -1,5 +1,7 @@
 import { LogoutLink } from "./LogoutLink";
 import { Axios } from "axios";
+import { ResumeShow } from "./ResumeShow";
+import { Routes, Route } from "react-router-dom";
 
 export function Content() {
   const resumes = [
