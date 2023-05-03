@@ -3,6 +3,7 @@ import { Axios } from "axios";
 import { ResumeShow } from "./ResumeShow";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import { Login } from "./Login";
 
 export function Content() {
   const [resumes, setResumes] = useState([]);
@@ -24,6 +25,8 @@ export function Content() {
       <h1>My Resume</h1>
       <Routes>
         <Route path="/resume/:id" element={<ResumeShow resumes={resumes} onShowResume={handleShowResume} />} />
+        <Route path="/logout" element={<LogoutLink />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );
