@@ -1,8 +1,19 @@
 import { LogoutLink } from "./LogoutLink";
 import { Axios } from "axios";
 import { ResumeShow } from "./ResumeShow";
+import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 export function Content() {
+  const [resumes, setResumes] = useState([]);
+  const [isResumeShowVisible, setIsResumeShowVisible] = useState(false);
+  const [currentResume, setCurrentResume] = useState({});
+
+  const handleShowResume = (resume) => {
+    setIsResumeShowVisible(true);
+    setCurrentResume(resume);
+  };
+
   const resume = [
     {
       id: 1,
@@ -19,9 +30,18 @@ export function Content() {
       photo: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
     },
   ];
+
   return (
     <div>
-      <ResumeShow resume={resume} />
+      <h1>My Resume</h1>
+      <Routes>
+        <Route
+          path="/resume/:id"
+          element={
+            <ResumeShow resumes={resumes} onShowResume={handleShowResume} />
+          }
+        />
+      </Routes>
     </div>
   );
 }
