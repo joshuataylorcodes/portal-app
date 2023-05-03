@@ -9,11 +9,6 @@ export function Content() {
   // const [resume, setResume] = useState([]);
   const [currentResume, setCurrentResume] = useState({});
 
-  // const handleShowResume = (resume) => {
-  //   setIsResumeShowVisible(true);
-  //   setCurrentResume(resume);
-  // };
-
   const resume = {
     id: 1,
     first_name: "Leah ",
