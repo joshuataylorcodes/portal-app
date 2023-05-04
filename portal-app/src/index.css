@@ -1,42 +1,50 @@
 html, body {
-  background-color: white;
-  /* background-image: url("https://images.pexels.com/photos/356065/pexels-photo-356065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); */
+  background: url("https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: black;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+  padding-bottom: 2.5rem;
+  background: rgba(0.6);
 }
+
 header {
-  background-color: rgb(207, 202, 202);
+  background-color: rgba(253, 253, 253, 0.65);
   padding-top: .2rem;
-  border: 5px solid black;
-  border-radius: 5px;
+  border: 2px solid black;
+  border-radius: 10px;
   text-align: left;
   padding-bottom: .2rem;
   padding-left: 1rem;
-  margin: none;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 h1 {
   color: black;
-  background-color: rgb(207, 202, 202);
-  border: 5px solid black;
-  border-radius: 5px;
+  background-color: rgba(253, 253, 253, 0.65);
+  border: 2px solid black;
+  border-radius: 10px;
   text-align: center;
   padding: 10px;
   width: 80%;
   margin: .5em auto;
   font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .resume-container {
-  background-color: rgb(207, 202, 202);
-  border: 5px solid black;
-  border-radius: 5px;
+  border: 2px solid black;
+  border-radius: 10px;
   padding: 1em;
   box-shadow: 0 0 20px rgba(0, 0, 1, 0.5);
   text-align: center;
   height: auto;
   width: 50%;
   margin: auto;
+  background-color: rgba(253, 253, 253, 0.65);
 
 }
 
@@ -55,9 +63,14 @@ h1 {
 }
 
 .footer {
-  margin-top: 40px;
+  background-color: rgba(253, 253, 253, 0.65);
+  box-shadow: 0 0 20px rgba(0, 0, 1, 0.5);
   text-align: center;
-  color:black
+  color:black;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 2.5rem;
 }
 
 
@@ -124,11 +137,11 @@ h1 {
 a.button {
  background-color:#c9601e;
  border:1px solid #000000;
- border-radius:5px;
+ border-radius: 5px;
  color:#fff;
  margin-right:10px;
- padding:10px 10px 10px 10px; 
- box-shadow: 0 2px 2px 2px #c9601e;;
+ padding:10px 10px 10px 10px;
+ box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 a.button:hover{
@@ -143,35 +156,30 @@ a.button:active,a.button:focus,a.button:hover {
 a {
   text-decoration: none;
 }
-
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-
 p.navmsg {
   padding-left: 32rem;
 }
-
 li {
   display: inline-block;
 }
-
 nav {
   vertical-align: top;
 }
 
 #login-container {
-  background-color: rgb(207, 202, 202);
- 
-  border: 5px solid black;
+  font-size: larger;
+  background-color: rgba(253, 253, 253, 0.6);
+  border: 2px solid black;
   border-radius: 5px;
   padding: 1em;
   box-shadow: 0 0 20px rgba(0, 0, 1, 0.5);
   text-align: center;
   width: 50%;
   margin: auto;
-  
-
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
