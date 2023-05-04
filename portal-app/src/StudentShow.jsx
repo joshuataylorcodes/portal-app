@@ -8,9 +8,11 @@ export function StudentShow() {
   const params = useParams();
 
   const handleShowStudent = () => {
-    axios.get(`http://localhost:3000/students/${params.id}.json`).then((response) => {
-      setStudent(response.data);
-    });
+    axios
+      .get(`http://localhost:3000/students/${params.id}.json`)
+      .then((response) => {
+        setStudent(response.data);
+      });
   };
 
   useEffect(handleShowStudent, []);
@@ -36,12 +38,13 @@ export function StudentShow() {
           <img src={student.image_url} />
         </div>
         <div id="social-icons">
-          <a href="#" className="fa fa-facebook"></a>
-          <a href="#" className="fa fa-twitter"></a>
-          <a href="#" className="fa fa-linkedin-square"></a>
-          <a href="#" className="fa fa-github-square"></a>
-          <a href="#" className="fa fa-phone-square"></a>
-          <a href="#" className="fa fa-globe"></a>
+          <a href={student.email} className="fa fa-envelope"></a>
+
+          <a href={student.twitter_handle} className="fa fa-twitter"></a>
+          <a href={student.resume_url} className="fa fa-linkedin-square"></a>
+          <a href={student.resume_url} className="fa fa-github-square"></a>
+          <a href={student.phone_number} className="fa fa-phone-square"></a>
+          <a href={student.resume_url} className="fa fa-globe"></a>
         </div>
       </div>
     </div>

@@ -45,7 +45,16 @@ h1 {
   width: 50%;
   margin: auto;
   background-color: rgba(253, 253, 253, 0.65);
+}
 
+.resume-container img {
+  width: 300px;
+  height: auto;
+  border: 3px solid grey;
+  border-radius: 2px;
+  background: #eee;
+  margin: auto;
+  padding: 1em 1em 1em 1em;
 }
 
 .resume-container:hover {
@@ -60,6 +69,7 @@ h1 {
   margin-left: 100px;
   margin-right: 100px;
   border-radius: 5px;
+  padding: .5em;
 }
 
 .footer {
@@ -88,7 +98,7 @@ h1 {
 }
 
 
-.fa-facebook {
+.fa-envelope {
   background: #3B5998;
   color: white;
   margin-left: 5px;
@@ -182,4 +192,8 @@ nav {
   width: 50%;
   margin: auto;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#social-icons {
+  padding: .5em;
 }
