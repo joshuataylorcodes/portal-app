@@ -45,7 +45,7 @@ export function Content() {
         <Route path="/login" element={<Login />} />
         <Route
           path="/students/:id"
-          element={<ResumeShow students={students} onUpdateStudent={handleUpdateStudent} />}
+          element={<StudentShow students={students} onUpdateStudent={handleUpdateStudent} />}
         />
       </Routes>
     </div>
