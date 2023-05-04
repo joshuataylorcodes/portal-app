@@ -1,46 +1,49 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
-export function StudentShow(props) {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const params = new FormData(event.target);
-    props.onUpdateStudent(props.student.id, params);
-    event.target.reset();
+export function StudentShow() {
+  const [student, setStudent] = useState([]);
+  const params = useParams();
+
+  const handleShowStudent = () => {
+    axios.get(`http://localhost:3000/students/${params.id}.json`).then((response) => {
+      setStudent(response.data);
+    });
   };
 
+  useEffect(handleShowStudent, []);
+
   return (
-    <div id="student-show">
-      <h1>My student</h1>
-      <div className="student-container">
+    <div id="resume-show">
+      <h1>Resume</h1>
+      <div className="resume-container">
         <div id="resume-name">
-          {props.student.first_name}
-          {props.student.last_name}
+          {student.first_name}
+          {student.last_name}
         </div>
-        <div id="student-email">{props.student.email}</div>
-        <div id="student-phone">{props.student.phone_number}</div>
-        <div id="student-bio">{props.student.bio}</div>
-        <div id="student-linkedin">{props.student.linkedin_url}</div>
-        <div id="student-twitter">{props.student.twitter_url}</div>
-        <div id="student-website">{props.student.website}</div>
-        <div id="student-student-url">{props.student.student_url}</div>
-        <div id="student-github">{props.student.github}</div>
-        <div id="student-photo">
-          <img src={props.student.photo} />
+        <div className="resume-bio">{student.short_bio}</div>
+        <div id="resume-email">{student.email}</div>
+        <div id="resume-phone">{student.phone_number}</div>
+
+        <div id="resume-linkedin">{student.linkedin_url}</div>
+        <div id="resume-twitter">{student.twitter_handle}</div>
+        <div id="resume-website">{student.website_url}</div>
+        <div id="resume-resume-url">{student.resume_url}</div>
+        <div id="resume-github">{student.github_url}</div>
+        <div id="resume-photo">
+          <img src={student.image_url} />
+        </div>
+        <div id="social-icons">
+          <a href="#" className="fa fa-facebook"></a>
+          <a href="#" className="fa fa-twitter"></a>
+          <a href="#" className="fa fa-linkedin-square"></a>
+          <a href="#" className="fa fa-github-square"></a>
+          <a href="#" className="fa fa-phone-square"></a>
+          <a href="#" className="fa fa-globe"></a>
         </div>
       </div>
-      <form onSubmit={handleSubmit}>
-        <div>
-          Email: <input defaultValue={props.student.email} name="email" type="text" />
-        </div>
-        <div>
-          Phone Number: <input defaultValue={props.student.phone_number} name="phone_number" type="text" />
-        </div>
-        <div>
-          Bio: <input defaultValue={props.student.bio} name="bio" type="text" />
-        </div>
-        <button type="submit"> Update the student</button>
-      </form>
     </div>
   );
 }
