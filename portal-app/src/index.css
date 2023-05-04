@@ -1,0 +1,177 @@
+html, body {
+  background-color: white;
+  /* background-image: url("https://images.pexels.com/photos/356065/pexels-photo-356065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); */
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+header {
+  background-color: rgb(207, 202, 202);
+  padding-top: .2rem;
+  border: 5px solid black;
+  border-radius: 5px;
+  text-align: left;
+  padding-bottom: .2rem;
+  padding-left: 1rem;
+  margin: none;
+}
+
+h1 {
+  color: black;
+  background-color: rgb(207, 202, 202);
+  border: 5px solid black;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  width: 80%;
+  margin: .5em auto;
+  font-weight: bold;
+}
+.resume-container {
+  background-color: rgb(207, 202, 202);
+  border: 5px solid black;
+  border-radius: 5px;
+  padding: 1em;
+  box-shadow: 0 0 20px rgba(0, 0, 1, 0.5);
+  text-align: center;
+  height: auto;
+  width: 50%;
+  margin: auto;
+
+}
+
+.resume-container:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+#resume-name {
+  font-size: 40px;
+}
+.resume-bio {
+  background-color: rgb(254, 254, 254);
+  border: 2px solid black;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 5px;
+}
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  color:black
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.fa:hover {
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 1px 4px, rgba(255, 255, 255, 0.5) 0px 0px 0px 3px;
+}
+
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 20%;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 20%;
+}
+
+.fa-linkedin-square {
+  background: #0072B1;
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 20%;
+}
+
+.fa-github-square {
+  background: #6CC644;
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 20%;
+}
+.fa-phone-square {
+  background: black;
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 20%;
+}
+.fa-globe {
+  background: purple;
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 20%;
+}
+
+a.button {
+ background-color:#c9601e;
+ border:1px solid #000000;
+ border-radius:5px;
+ color:#fff;
+ margin-right:10px;
+ padding:10px 10px 10px 10px; 
+ box-shadow: 0 2px 2px 2px #c9601e;;
+}
+
+a.button:hover{
+  border:3px solid #000000;
+}
+
+a.button:active,a.button:focus,a.button:hover {
+  background-color:#e2af07;
+  margin-top:-5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+p.navmsg {
+  padding-left: 32rem;
+}
+
+li {
+  display: inline-block;
+}
+
+nav {
+  vertical-align: top;
+}
+
+#login-container {
+  background-color: rgb(207, 202, 202);
+ 
+  border: 5px solid black;
+  border-radius: 5px;
+  padding: 1em;
+  box-shadow: 0 0 20px rgba(0, 0, 1, 0.5);
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  
+
+}

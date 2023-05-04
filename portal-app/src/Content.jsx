@@ -15,13 +15,14 @@ export function Content() {
     last_name: "Perri",
     email: "leah@example.com",
     phone_number: "123.456.7890",
-    bio: "I'm super kewl.",
+    short_bio:
+      "In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to eat: it was a hobbit­hole, and that means comfort.",
     linkedin_url: "linkedin.com/leah",
-    twitter_url: "twitter.com/leah",
-    website: "leah.com",
-    student_url: "leahstudent.googledocs.com",
-    github: "github.com/leah",
-    photo: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
+    twitter_handle: "twitter.com/leah",
+    website_url: "leah.com",
+    resume_url: "leahresume.googledocs.com",
+    github_url: "github.com/leah",
+    image_url: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
   };
 
   const handleUpdateStudent = (id, params, successCallback) => {
