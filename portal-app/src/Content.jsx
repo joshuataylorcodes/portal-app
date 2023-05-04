@@ -1,15 +1,16 @@
 import { LogoutLink } from "./LogoutLink";
 import { Axios } from "axios";
-import { ResumeShow } from "./ResumeShow";
+import { StudentShow } from "./StudentShow";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import { Login } from "./Login";
+import { Modal } from "./Modal";
 
 export function Content() {
-  // const [resume, setResume] = useState([]);
-  const [currentResume, setCurrentResume] = useState({});
+  // const [student, setstudent] = useState([]);
+  // const [students, setStudents] = useState({});
 
-  const resume = {
+  const students = {
     id: 1,
     first_name: "Leah ",
     last_name: "Perri",
@@ -22,15 +23,28 @@ export function Content() {
     website_url: "leah.com",
     resume_url: "leahresume.googledocs.com",
     github_url: "github.com/leah",
-    image_url:
-      "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
+    image_url: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
+  };
+
+  const handleUpdateStudent = (id, params, successCallback) => {
+    console.log("handleUpdateStudent", params);
+    students.map((student) => {
+      if (student.id === response.data.id) {
+        return response.data;
+      } else {
+        return student;
+      }
+    });
+
+    successCallback();
+    // handleClose();
   };
 
   return (
     <div>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<ResumeShow resume={resume} />} />
+        <Route path="/" element={<StudentShow student={students} onUpdateStudent={handleUpdateStudent} />} />
       </Routes>
     </div>
   );
