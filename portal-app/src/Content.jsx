@@ -4,6 +4,7 @@ import { StudentShow } from "./StudentShow";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import { Login } from "./Login";
+import { Modal } from "./Modal";
 
 export function Content() {
   // const [student, setstudent] = useState([]);
