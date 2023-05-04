@@ -14,15 +14,14 @@ export function Header() {
                 </a>
               </li>
               <li>
-                <a href="/" className="button">
+                <a href="/students/1" className="button">
                   Home Page
                 </a>
               </li>
               <li>
                 <p className="navmsg">
                   {"                   "}
-                  Welcome to your Student Portal! Please Login to View your
-                  Resume{" "}
+                  Welcome to your Student Portal! Please Login to View your Resume{" "}
                 </p>
               </li>
             </ul>
