@@ -1,5 +1,6 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const jwt = localStorage.getItem("jwt");
 if (jwt) {
@@ -8,6 +9,7 @@ if (jwt) {
 
 export function Login() {
   const [errors, setErrors] = useState([]);
+  const params = useParams();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -17,17 +19,17 @@ export function Login() {
       .post("http://localhost:3000/sessions.json", params)
       .then((response) => {
         console.log(response.data);
-        axios.defaults.headers.common["Authorization"] =
-          "Bearer " + response.data.jwt;
+        axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
         localStorage.setItem("jwt", response.data.jwt);
         event.target.reset();
-        window.location.href = "/";
+        window.location.href = `/students/1`;
       })
       .catch((error) => {
         console.log(error.response);
         setErrors(["invalid email or password"]);
       });
   };
+
   return (
     <div id="login">
       <div id="transbox">
