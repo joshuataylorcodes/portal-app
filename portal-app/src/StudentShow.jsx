@@ -1,17 +1,14 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import axios from "axios";
 
 export function StudentShow() {
   const [student, setStudent] = useState([]);
-  const params = useParams();
+  const id = localStorage.getItem("student_id");
 
   const handleShowStudent = () => {
-    axios
-      .get(`http://localhost:3000/students/${params.id}.json`)
-      .then((response) => {
-        setStudent(response.data);
-      });
+    axios.get(`http://localhost:3000/students/${id}.json`).then((response) => {
+      setStudent(response.data);
+    });
   };
 
   useEffect(handleShowStudent, []);
@@ -74,31 +71,11 @@ export function StudentShow() {
         <div id="social-icons">
           <a href="#" className="fa fa-envelope" onClick={handleEmailClick}></a>
 
-          <a
-            href="#"
-            className="fa fa-twitter"
-            onClick={handleTwitterClick}
-          ></a>
-          <a
-            href={student.resume_url}
-            className="fa fa-linkedin-square"
-            onClick={handleLinkedInClick}
-          ></a>
-          <a
-            href={student.github_url}
-            className="fa fa-github-square"
-            onClick={handleGitHubClick}
-          ></a>
-          <a
-            href="#"
-            className="fa fa-phone-square"
-            onClick={handlePhoneClick}
-          ></a>
-          <a
-            href={student.website_url}
-            className="fa fa-globe"
-            onClick={handleWebsiteClick}
-          ></a>
+          <a href="#" className="fa fa-twitter" onClick={handleTwitterClick}></a>
+          <a href={student.resume_url} className="fa fa-linkedin-square" onClick={handleLinkedInClick}></a>
+          <a href={student.github_url} className="fa fa-github-square" onClick={handleGitHubClick}></a>
+          <a href="#" className="fa fa-phone-square" onClick={handlePhoneClick}></a>
+          <a href={student.website_url} className="fa fa-globe" onClick={handleWebsiteClick}></a>
         </div>
       </div>
     </div>

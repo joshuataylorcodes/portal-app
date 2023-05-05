@@ -5,12 +5,14 @@ export function LogoutLink() {
     event.preventDefault();
     delete axios.defaults.headers.common["Authorization"];
     localStorage.removeItem("jwt");
+    localStorage.removeItem("student_id");
     window.location.href = "/login";
   };
 
   return (
-    <a href="#" onClick={handleClick}>
-      Logout
-    </a>
+    <div className="logout">
+      <h2>Are you sure you would like to Log Out</h2>
+      <button onClick={handleClick}>Yes</button>;
+    </div>
   );
 }
