@@ -9,8 +9,9 @@ export function LogoutLink() {
   };
 
   return (
-    <a href="#" onClick={handleClick}>
-      Logout
-    </a>
+    <div className="logout">
+      <h2>Are you sure you would like to Log Out</h2>
+      <button onClick={handleClick}>Yes</button>;
+    </div>
   );
 }
