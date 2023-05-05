@@ -1,6 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 const jwt = localStorage.getItem("jwt");
 if (jwt) {
@@ -9,7 +8,6 @@ if (jwt) {
 
 export function Login() {
   const [errors, setErrors] = useState([]);
-  const params = useParams();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -21,8 +19,10 @@ export function Login() {
         console.log(response.data);
         axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
         localStorage.setItem("jwt", response.data.jwt);
+        localStorage.setItem("student_id", response.data.student_id);
+        const id = localStorage.getItem("student_id");
         event.target.reset();
-        window.location.href = `/students/1`;
+        window.location.href = `/students/${id}`;
       })
       .catch((error) => {
         console.log(error.response);
